@@ -8,7 +8,6 @@
 package routers
 
 import (
-	"shareSport/object"
 	"shareSport/user"
 
 	"github.com/astaxie/beego"
@@ -16,11 +15,6 @@ import (
 
 func init() {
 	ns := beego.NewNamespace("/v1",
-		beego.NSNamespace("/object",
-			beego.NSInclude(
-				&object.ObjectController{},
-			),
-		),
 		beego.NSNamespace("/user",
 			beego.NSInclude(
 				&user.UserController{},
